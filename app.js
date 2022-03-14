@@ -5,11 +5,11 @@ const mysql = require('mysql');
 
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    database: 'test',
-    port: 3000,
+    host: '127.0.0.1',
+    user: 'vlad',
+    password: '******',
+    database: 'commdiva',
+    port: 3306,
 });
 
 // Connect
@@ -26,11 +26,11 @@ const app = express();
 // create db
 
 app.get('/create', (req, res) => {
-  let sql = 'CREATE DATABASE nodemysql';
+  // let sql = 'CREATE DATABASE nodemysql';
   
-  // let sql = 'SELECT * FROM users';
+  let sql = 'SELECT * FROM user';
 
-  db.query(sql, function(err, result) {
+  db.query(sql, (err, result) => {
     if(err) throw err;
     console.log(result);
     res.send('db created!');
@@ -40,3 +40,6 @@ app.get('/create', (req, res) => {
 app.listen('3000', () => {
   console.log('Server started!');
 })
+
+
+// nodemon app.js
