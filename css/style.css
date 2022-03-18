@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  /* background-image: url(../); */
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu-item a {
+  margin: 0 7px;
+}
+
+.user-title {
+  text-align: right;
+}
